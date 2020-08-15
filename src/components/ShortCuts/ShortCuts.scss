@@ -1,0 +1,24 @@
+.ShortCuts {
+  display: flex;
+  padding: 0.5rem 0.3rem;
+  background-color: #fff;
+  & > div {
+    flex-grow: 1;
+    & > a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      text-decoration: none;
+      width: 5rem;
+      height: 3.75rem;
+
+      & > span:nth-child(2) {
+        font-size: 0.75rem;
+        margin-top: 0.5rem;
+        color: #222;
+      }
+    }
+  }
+}

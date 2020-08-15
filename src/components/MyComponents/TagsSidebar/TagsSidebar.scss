@@ -1,0 +1,22 @@
+.TagsSidebar {
+  padding: 1.875rem;
+  background-color: #fff;
+  &__inner {
+    box-sizing: border-box;
+    & > a {
+      text-decoration: none;
+      display: inline-block;
+      padding-right: 0.3rem;
+    }
+
+    & .size-14 {
+      font-size: 0.75rem;
+    }
+    & .size-20 {
+      font-size: 1rem;
+    }
+    & .size-14 {
+      font-size: 1.25rem;
+    }
+  }
+}

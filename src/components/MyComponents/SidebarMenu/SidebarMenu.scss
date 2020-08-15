@@ -1,0 +1,64 @@
+.SidebarMenu {
+  padding: 0.5rem 0;
+  background-color: #f2f2f2;
+  &__inner {
+    & ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+    & > ul.parent-1 {
+      & > li {
+        position: relative;
+
+        &:hover ul.parent-2 {
+          visibility: visible;
+          top: 0;
+          left: 100%;
+          z-index: 1;
+        }
+
+        & > ul.parent-2 {
+          position: absolute;
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          grid-template-rows: auto auto;
+
+          background-color: #fff;
+          visibility: hidden;
+          padding: 1rem;
+          min-width: 100%;
+          max-width: 400%;
+
+          & > li {
+            width: 8rem;
+
+            & a {
+              text-decoration: none;
+            }
+            & > a {
+              font-size: 1rem;
+              font-weight: 500;
+            }
+            & > ul {
+              margin: 0.5rem 0;
+            }
+          }
+        }
+      }
+
+      & > li > a {
+        display: flex;
+        padding: 0.6875rem 1.1875rem 0.6875rem 0.9375rem;
+        text-decoration: none;
+        color: #4d4d4d;
+        font-size: 0.9375rem;
+        font-weight: 500;
+        justify-content: space-between;
+
+        & > span {
+        }
+      }
+    }
+  }
+}

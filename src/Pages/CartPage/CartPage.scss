@@ -1,0 +1,10 @@
+.CartPage {
+  &__inner {
+    max-width: 80%;
+    margin: 0 auto;
+
+    & > .cart-table {
+      margin: 2rem 0;
+    }
+  }
+}

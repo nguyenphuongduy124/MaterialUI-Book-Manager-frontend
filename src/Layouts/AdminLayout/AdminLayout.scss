@@ -1,0 +1,15 @@
+.AdminLayout {
+  &__inner {
+    display: flex;
+    min-height: 100vh;
+    &-sidebar {
+      flex-basis: 17%;
+      min-height: 100%;
+    }
+
+    & > .admin-page-section {
+      flex-basis: 83%;
+      height: 2000px;
+    }
+  }
+}

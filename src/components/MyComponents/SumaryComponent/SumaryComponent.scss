@@ -1,0 +1,38 @@
+.SumaryComponent {
+  &__inner {
+    display: grid;
+    grid-template-columns: 33% 1fr 33%;
+    grid-template-rows: auto auto;
+    grid-gap: 1rem;
+    grid-template-areas:
+      'sign-in deal-2 deal-3'
+      'deal-1 deal-2 categories';
+
+    & > div {
+      background-color: #fff;
+    }
+    & .sign-in {
+      grid-area: sign-in;
+
+      & .sign-in-btn {
+        background-color: #ed6f00;
+        margin-bottom: 1rem;
+      }
+      & .simple-link {
+        display: flex;
+      }
+    }
+    & .today-deal-1 {
+      grid-area: deal-1;
+    }
+    & .today-deal-2 {
+      grid-area: deal-2;
+    }
+    & .today-deal-3 {
+      grid-area: deal-3;
+    }
+    & .categories {
+      grid-area: categories;
+    }
+  }
+}

@@ -1,0 +1,89 @@
+.ShopWithConfidence {
+  &__inner {
+    & > .quotes {
+      font-style: italic;
+      font-weight: lighter;
+      font-size: 1rem;
+    }
+    & > .highlight {
+      display: flex;
+      flex-wrap: wrap;
+
+      & > div {
+        flex-basis: 50%;
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        & > p {
+          margin: 0;
+
+          &.hit {
+            color: #cc4e00;
+            font-weight: 600;
+            & > .number {
+              font-size: 4rem;
+            }
+            & > .text {
+              font-size: 1.625rem;
+            }
+          }
+          &.subHit {
+            font-size: 0.75rem;
+          }
+        }
+      }
+    }
+
+    & > .subcribe {
+      margin-top: 1.875rem;
+      display: flex;
+      flex-direction: column;
+      & > .subcribe__left {
+        display: flex;
+        flex-direction: column;
+        & > span:first-child {
+          font-size: 1.25rem;
+          font-weight: 300;
+          letter-spacing: 0;
+        }
+        & > span:last-child {
+          font-size: 0.75rem;
+          font-weight: 300;
+        }
+      }
+      & > .subcribe__center {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        & > div {
+          width: 70%;
+        }
+      }
+      & > div {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  .ShopWithConfidence {
+    &__inner {
+      & > .highlight {
+        flex-wrap: nowrap;
+        & > div {
+          flex-basis: 100%;
+        }
+      }
+      & > .subcribe {
+        flex-direction: row;
+        align-items: center;
+        & > div {
+          margin-bottom: 0;
+          margin-right: 1.25rem;
+        }
+      }
+    }
+  }
+}

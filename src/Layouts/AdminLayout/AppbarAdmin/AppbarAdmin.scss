@@ -1,0 +1,24 @@
+.HeaderAdmin {
+  padding: 0.3rem;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-left {
+      display: flex;
+      & > .menu-toggle {
+        margin-left: 0.5rem;
+      }
+      & > .search-control {
+        margin-left: 1rem;
+        & > .search-control-input {
+          background-color: #fff;
+        }
+      }
+    }
+
+    &-right {
+    }
+  }
+}

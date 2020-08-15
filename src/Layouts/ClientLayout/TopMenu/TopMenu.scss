@@ -1,0 +1,203 @@
+$primaryBG: #00283a;
+$colorText: #fff;
+$colorOrange: #f05423;
+$colorBlueLight: #91cbe8;
+$fontSize: 10;
+.TopMenu {
+  background-color: $primaryBG;
+  color: $colorText;
+  &__inner {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "logo info-user"
+      "search search "
+      "portal portal ";
+
+    & > .logo {
+      grid-area: logo;
+      height: 2.75rem;
+
+      & > div {
+        display: flex;
+        height: 100%;
+        align-items: center;
+        padding: 0.2rem;
+
+        & > svg {
+          size: 32px;
+        }
+
+        & > a {
+          height: 100%;
+
+          & > img {
+            height: 100%;
+          }
+        }
+      }
+    }
+    & > .info-user {
+      grid-area: info-user;
+
+      & > div {
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content: flex-end;
+
+        & > a {
+          color: #fff;
+          text-decoration: none;
+
+          & > div {
+            display: none;
+          }
+        }
+      }
+    }
+    & > .search {
+      grid-area: search;
+      padding: 0 0.4rem;
+
+      & > div {
+        width: 100%;
+        background-color: $primaryBG;
+
+        & > div {
+          background-color: #fff;
+        }
+      }
+    }
+    & > .portal {
+      grid-area: portal;
+      padding: 0.4rem;
+
+      & > div {
+        overflow: hidden;
+        height: 1.5rem;
+        line-height: 1.5rem;
+        & > a {
+          color: $colorBlueLight;
+          margin-right: $fontSize * 1.5 + px;
+          text-decoration: none;
+        }
+      }
+    }
+    & > .services {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .TopMenu {
+    &__inner {
+      height: 6.25rem;
+      grid-template-columns: auto 1fr auto;
+      grid-template-rows: auto auto;
+      grid-template-areas:
+        "logo search info-user"
+        "logo portal services";
+      & > .logo {
+        grid-area: logo;
+        align-self: center;
+        width: 14.625rem;
+        height: 100%;
+        margin-right: 1.2rem;
+
+        & > div {
+          display: flex;
+          height: 100%;
+          align-items: center;
+          padding: 0.2rem;
+
+          & > svg {
+            size: 2rem;
+            margin-right: 1rem;
+          }
+
+          & > a {
+            height: 80%;
+
+            & > img {
+              width: 100%;
+            }
+          }
+        }
+      }
+      & > .search {
+        grid-area: search;
+        align-self: flex-end;
+        margin-right: 1.2rem;
+      }
+      & > .info-user {
+        grid-area: info-user;
+        & .cart {
+          & > a {
+            color: inherit;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+
+            & > span {
+              background-color: #f05423;
+              padding: 0.3rem 0.5rem;
+              border-radius: 3px;
+            }
+          }
+        }
+        & > div {
+          flex-direction: row-reverse;
+          align-items: flex-end;
+          justify-content: flex-start;
+          & > div {
+            margin-right: 2rem;
+          }
+          & > a {
+            color: #fff;
+            text-decoration: none;
+            display: flex;
+            margin-right: 2rem;
+            & > div {
+              display: flex;
+              flex-direction: column;
+
+              & > span:first-child {
+                font-size: 0.6875rem;
+                opacity: 0.7;
+              }
+              & > span:nth-child(2) {
+                font-size: 0.875rem;
+                font-weight: 600;
+              }
+            }
+          }
+        }
+      }
+      & > .portal {
+        grid-area: portal;
+        padding: 0.4rem 0 0 0.4rem;
+        & > div {
+          overflow: hidden;
+          height: auto;
+          line-height: initial;
+        }
+      }
+      & > .services {
+        grid-area: services;
+        display: block;
+        padding: 0.4rem 0 0 0.4rem;
+
+        & > div {
+          & > a {
+            margin-right: 1rem;
+            color: #fff;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}

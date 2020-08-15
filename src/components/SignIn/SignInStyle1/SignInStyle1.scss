@@ -1,0 +1,28 @@
+.SignInStyle1 {
+  padding: 1rem;
+  background-color: #fff;
+  margin-top: 1rem;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+
+    & > button {
+      background-color: #ed6f00;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    & > div {
+      text-align: center;
+      padding: 1rem;
+
+      & > a {
+        text-decoration: none;
+        color: #0070ab;
+        font-weight: 600;
+        margin-left: 0.3rem;
+      }
+    }
+  }
+}

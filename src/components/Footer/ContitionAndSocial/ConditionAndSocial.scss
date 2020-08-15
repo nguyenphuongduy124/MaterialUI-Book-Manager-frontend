@@ -1,0 +1,57 @@
+.ConditionAndSocial {
+  padding: 1.875rem 0 1rem 0;
+  &__inner {
+    & > .conditions {
+      text-align: center;
+      padding: 0 2rem;
+      & > span {
+        display: inline-block;
+        margin-left: 0.5rem;
+        & > a {
+          text-decoration: none;
+          font-size: 0.6875rem;
+          color: #222;
+        }
+
+        &:first-child {
+          & > a::after {
+            content: "";
+            height: 0.6875rem;
+            border: 0.1px solid #aaa;
+            margin-left: 0.5rem;
+          }
+        }
+      }
+    }
+
+    & > .socials {
+      margin-top: 1rem;
+      text-align: center;
+      & > svg {
+        margin-right: 0.5rem;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  .ConditionAndSocial {
+    &__inner {
+      & > .conditions {
+        & > span {
+          &:nth-child(2) {
+            & > a::after {
+              content: "";
+              height: 0.6875rem;
+              border: 0.1px solid #aaa;
+              margin-left: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

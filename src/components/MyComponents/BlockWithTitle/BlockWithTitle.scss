@@ -1,0 +1,58 @@
+.BlockWithTitle {
+  padding: 1.875rem;
+
+  &__inner {
+    & .block-title {
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: flex-end;
+      & > div {
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: 1.125rem;
+        margin-right: 1.5rem;
+      }
+      & > a {
+        font-weight: 400;
+
+        display: none;
+      }
+    }
+    & .only-title {
+      margin-bottom: 0;
+      background-color: #fff;
+    }
+  }
+  &-no-padding {
+    padding: 0;
+  }
+}
+@media (min-width: 600px) {
+  .BlockWithTitle {
+    padding: 1.875rem;
+
+    &__inner {
+      & .block-title {
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: flex-end;
+        & > div {
+          text-transform: uppercase;
+          font-weight: 300;
+          font-size: 1.5rem;
+        }
+        & > a {
+          font-weight: 400;
+          display: flex;
+        }
+      }
+      & .only-title {
+        margin-bottom: 0;
+        background-color: #fff;
+      }
+    }
+    &-no-padding {
+      padding: 0;
+    }
+  }
+}

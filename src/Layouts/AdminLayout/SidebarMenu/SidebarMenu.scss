@@ -1,0 +1,74 @@
+.SidebarAdmin {
+  background-color: #33425a;
+  &__inner {
+    // General
+    & ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      & li {
+        color: #fff;
+        padding: 0.5rem;
+      }
+      & a {
+        text-decoration: none;
+        color: #fff;
+      }
+    }
+
+    // Primary
+    & > .logo-admin {
+      height: 5rem;
+      padding: 0.5rem;
+      & > img {
+        height: 100%;
+        -webkit-filter: drop-shadow(5px 5px 5px #fff);
+        filter: drop-shadow(5px 5px 5px #fff);
+      }
+    }
+
+    & > .menus-admin {
+      & .has-submenu {
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+      }
+    }
+
+    // Toggle menu
+    & > div.menus-admin {
+      & > ul.level-1 {
+        & > li {
+          position: relative;
+          & > ul.level-2 {
+            transition: all 0.5s ease-in-out;
+            transform-origin: top;
+          }
+        }
+
+        // show submenu
+        & > li.show-submenu {
+          & > .has-submenu {
+            & .add-icon {
+              display: none;
+            }
+          }
+          & > ul.level-2 {
+            display: block;
+          }
+        }
+        // hidden submenu
+        & > li.hidden-submenu {
+          & > ul.level-2 {
+            display: none;
+          }
+          & > .has-submenu {
+            & .remove-icon {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

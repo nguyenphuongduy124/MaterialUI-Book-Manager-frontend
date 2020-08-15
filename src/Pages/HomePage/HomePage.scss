@@ -1,0 +1,129 @@
+.ClientLayout {
+  & .menus-slider-wrapper {
+    display: flex;
+    padding: 0 0.5rem;
+
+    & .menus {
+      margin-right: 1.25rem;
+      flex-grow: 1;
+      display: none;
+    }
+
+    & .slider {
+      width: 100%;
+    }
+  }
+
+  & .top-and-trending {
+    & .content {
+      display: flex;
+    }
+    &__left {
+      flex-grow: 3;
+      max-width: 100%;
+    }
+
+    &__right {
+      flex-grow: 1;
+      display: none;
+      margin-left: 1.25rem;
+    }
+  }
+
+  & .top-rate {
+    & .content {
+      display: flex;
+    }
+    &__left {
+      max-width: 100%;
+      & > div:first-child {
+        padding: 1rem;
+        background-color: #fff;
+      }
+      & > div:nth-child(2) {
+        background-color: #fff;
+        padding: 1rem;
+        margin-top: 1rem;
+      }
+    }
+  }
+}
+
+.best-deals-section__inner {
+  background-color: #fff;
+}
+
+// Media Query min-width: 600px
+@media (min-width: 600px) {
+  .ClientLayout {
+    & .top-and-trending {
+      &__left {
+        flex-grow: 3;
+        max-width: 75%;
+      }
+
+      &__right {
+        display: block;
+        max-width: 25%;
+      }
+    }
+    & .top-rate {
+      &__left {
+        flex-grow: 3;
+        max-width: 75%;
+      }
+      &__right {
+        max-width: 25%;
+        flex-grow: 1;
+        margin-left: 1.25rem;
+      }
+    }
+  }
+  .best-deals-section {
+    &__inner {
+      display: flex;
+      border: 1px solid #eee;
+
+      & > .SlideSimpleSlick {
+        width: 33%;
+      }
+
+      & > .list-item {
+        flex-grow: 1;
+
+        & > div {
+          height: 100%;
+          & > div {
+            // Product
+            width: 50%;
+            height: 50%;
+            float: left;
+            border-top: none;
+            border-left: 1px solid #eee;
+            padding: 1.5rem;
+          }
+          & > div:nth-child(-n + 2) {
+            border-bottom: 1px solid #eee;
+          }
+        }
+        & > div:after {
+          content: "";
+          clear: both;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 992px) {
+  .ClientLayout {
+    & .menus-slider-wrapper {
+      & .menus {
+        display: block;
+      }
+
+      & .slider {
+        width: 80%;
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+.CreditCard {
+  background-color: #fff;
+  padding: 1.875rem;
+
+  & > p {
+    font-weight: 500;
+    margin-top: 0;
+  }
+}

@@ -1,0 +1,23 @@
+.AddEditProduct {
+  &__inner {
+    & > .form-wrapper {
+      margin-top: 1rem;
+
+      & > .product-form {
+        & > div {
+          margin-bottom: 1rem;
+        }
+        & .wrap-input {
+          & > div {
+            background-color: #fff;
+          }
+        }
+
+        & .product-btn-submit {
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+  }
+}

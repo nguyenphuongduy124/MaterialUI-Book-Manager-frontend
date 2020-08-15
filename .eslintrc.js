@@ -22,6 +22,7 @@ module.exports = {
     'react/jsx-filename-extension': 0,
     eqeqeq: 1,
     'no-empty': 1,
+
     'prettier/prettier': [0],
   },
   overrides: [
