@@ -84,7 +84,7 @@ function AddEditProduct(props) {
         file: null,
       }
     : editedProduct;
-  if (id && !editedProduct) return <div>Cant not find product</div>;
+  if (id && !editedProduct) return <div>Loading...</div>;
   return (
     <div className="AddEditProduct">
       <div className="AddEditProduct__inner">

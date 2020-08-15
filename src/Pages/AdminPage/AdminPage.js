@@ -15,10 +15,30 @@ import AddEditProduct from '../Products/AddEditProduct/AddEditProduct';
 import AllPosts from '../Posts/AllPosts/AllPosts';
 import AddEditPost from '../Posts/AddEditPost/AddEditPost';
 import PageNotFound from '../PageNotFound/PageNotFound';
+import { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import {
+  showLoading,
+  hideLoading,
+} from '../../features/loading/loadingSlice';
+import { callApi } from '../../services/callApi';
+import { setProducts } from '../../features/products/productsSlice';
 
 function AdminPage(props) {
   const match = useRouteMatch();
-
+  const products = useSelector((state) => state.products);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    if (products.length === 0) {
+      dispatch(showLoading());
+      callApi.get().then((res) => {
+        if (res.status === 200) {
+          dispatch(setProducts(res.data));
+          dispatch(hideLoading());
+        }
+      });
+    } // eslint-disable-next-line
+  }, []);
   return (
     <AdminLayout>
       <Switch>

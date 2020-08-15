@@ -36,17 +36,6 @@ function AllProducts(props) {
   const products = useSelector((state) => state.products);
   const matches = useRouteMatch();
   const dispatch = useDispatch();
-  useEffect(() => {
-    if (products.length === 0) {
-      dispatch(showLoading());
-      callApi.get().then((res) => {
-        if (res.status === 200) {
-          dispatch(setProducts(res.data));
-          dispatch(hideLoading());
-        }
-      });
-    } // eslint-disable-next-line
-  }, []);
   function handleRemoveProduct(product) {
     setCurrentProduct(product);
     setOpen(true);
